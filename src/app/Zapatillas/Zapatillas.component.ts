@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RequestService } from '../services/request.service';
-import { FruitInterface} from '../models/fruit.model';
+import { ShoeInterface} from '../models/shoe.model';
 
 @Component({
   selector: 'app-Zapatillas',
@@ -9,17 +9,17 @@ import { FruitInterface} from '../models/fruit.model';
 })
 export class ZapatillasComponent {
 
-  fruitList: FruitInterface[]=[];
+  shoeList: ShoeInterface[]=[];
 
   constructor(private requestService:RequestService) { }
 
   ngOnInit() {
-    this.getFruits();
+    this.getShoes();
   }
   
-  private getFruits(){
-    this.requestService.getFruits().subscribe((data: FruitInterface[]) => {
-      this.fruitList=data;
+  private getShoes(){
+    this.requestService.getShoes().subscribe((data: ShoeInterface[]) => {
+      this.shoeList=data;
       console.log(data)
     })
   }

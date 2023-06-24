@@ -1,10 +1,11 @@
-export interface FruitInterface {
+export interface ShoeInterface {
     id: number;
-    fruitName: string;
+    shoeName: string;
     type: string;
-    priceKg: number;
+    price: number;
     origin: string;
     image: string;
+    description: string;
 }
 
 // export interface FruitResponseInterface {
