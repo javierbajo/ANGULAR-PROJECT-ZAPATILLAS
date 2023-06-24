@@ -1,0 +1,10 @@
+<p>
+  Zapatillas works!
+</p>
+<div>
+  <h3>Lista de frutas!</h3>
+  <div *ngFor="let fruit of fruitList">
+    <h4>{{fruit.fruitName}}</h4>
+    <img [src]="fruit.image" [alt]="fruit.fruitName">
+  </div>
+</div>
