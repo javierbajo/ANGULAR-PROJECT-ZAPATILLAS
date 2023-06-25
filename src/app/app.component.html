@@ -1,9 +1,16 @@
+<div class="divTitle">
 <h1>{{title}}</h1>
-
+</div>
 
 
 <app-Nav></app-Nav>
 
-<router-outlet></router-outlet>
+<div *ngIf >
+    <p>Usuario {{existUser.userName}}</p>
+</div>
+
+<router-outlet (pasaElUserAlPadre)="existUser"></router-outlet>
+
+
 
 <app-Footer></app-Footer>

@@ -1,0 +1,11 @@
+.divTitle{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(210, 238, 245);
+}
+
+h1{
+    font-style: italic;
+    font-size: 60px;
+}

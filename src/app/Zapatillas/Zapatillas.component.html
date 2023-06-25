@@ -1,10 +1,10 @@
-<p>
-  Zapatillas works!
-</p>
-<div>
+
+<div class="container">
   <h3>Lista de zapatillas!</h3>
-  <div *ngFor="let shoe of shoeList">
-    <h4>{{shoe.shoeName}}</h4>
-    <img [src]="shoe.image" [alt]="shoe.shoeName">
-  </div>
+  <ul id="cartaZapatillas">
+    <li *ngFor="let shoe of shoeList" class="card">
+      <h4>{{ shoe.shoeName }}</h4>
+      <img [src]="shoe.image" [alt]="shoe.shoeName" class="card-image" />
+    </li>
+  </ul>
 </div>

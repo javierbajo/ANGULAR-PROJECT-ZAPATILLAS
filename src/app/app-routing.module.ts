@@ -4,12 +4,18 @@ import { HomeComponent } from './Home/Home.component';
 import { ContactoComponent } from './Contacto/Contacto.component';
 import { LoginComponent } from './Login/Login.component';
 import { ZapatillasComponent } from './Zapatillas/Zapatillas.component';
+import { LogoutComponent } from './Logout/Logout.component';
+import { RegistroComponent } from './Registro/Registro.component';
+import { ErrorPaginaComponent } from './ErrorPagina/ErrorPagina.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'contacto', component: ContactoComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'zapatillas', component: ZapatillasComponent}
+  {path: 'zapatillas', component: ZapatillasComponent},
+  {path: 'logout', component: LogoutComponent},
+  {path: 'registro', component: RegistroComponent},
+  {path: '**', component: ErrorPaginaComponent}
 ];
 
 @NgModule({

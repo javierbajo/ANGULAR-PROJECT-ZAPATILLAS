@@ -1,3 +1,23 @@
-<p>
-  Login works!
-</p>
+<div class="formulario">
+  <form method="post">
+    <div class="divInput">
+     <input 
+     type="email" 
+     [(ngModel)]="email" 
+     name="email" 
+     placeholder="Email" 
+     class="form-control">
+    </div>
+    <div class="divInput">
+      <input 
+      type="password" 
+      [(ngModel)]="password" 
+      name="password"
+      placeholder="Password" 
+      class="form-control">
+     </div>
+     <div class="divButton">
+      <button type="submit"(click)="login()">LOGIN</button >
+     </div>
+  </form>
+</div>

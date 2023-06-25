@@ -18,7 +18,7 @@ export class ZapatillasComponent {
   }
   
   private getShoes(){
-    this.requestService.getShoes().subscribe((data: ShoeInterface[]) => {
+    this.requestService.getApiShoes().subscribe((data: ShoeInterface[]) => {
       this.shoeList=data;
       console.log(data)
     })

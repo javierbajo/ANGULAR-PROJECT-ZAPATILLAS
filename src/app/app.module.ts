@@ -12,6 +12,9 @@ import { ZapatillasComponent } from './Zapatillas/Zapatillas.component';
 import { NavComponent } from './Nav/Nav.component';
 import { FooterComponent } from './Footer/Footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LogoutComponent } from './Logout/Logout.component';
+import { RegistroComponent } from './Registro/Registro.component';
+import { ErrorPaginaComponent } from './ErrorPagina/ErrorPagina.component';
 
 
 
@@ -19,14 +22,17 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
-  declarations: [							
+  declarations: [										
     AppComponent,
       HomeComponent,
       ContactoComponent,
       ZapatillasComponent,
       LoginComponent,
       NavComponent,
-      FooterComponent
+      FooterComponent,
+      LogoutComponent,
+      RegistroComponent,
+      ErrorPaginaComponent
    ],
   imports: [
     BrowserModule,
