@@ -1,0 +1,36 @@
+.registro{
+    height: 600px;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    /* background-color: blue; */
+    display: flex;
+
+}
+
+form{
+    height: 400px;
+    width: 800px;
+    margin: 0px auto;
+    /* background-color: red; */
+    margin-top: 50px;
+    justify-content: center;
+    text-align: center;
+}
+
+.divInput{
+    /* background-color: aqua;
+    width: 600px; */
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+
+}
+
+.divButton{
+    text-align: center;
+}
+
+button{
+    width: 160px;
+}

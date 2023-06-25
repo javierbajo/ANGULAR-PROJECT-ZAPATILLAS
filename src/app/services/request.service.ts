@@ -8,6 +8,9 @@ import { Observable } from 'rxjs';
 })
 
 export class RequestService {
+postData(arg0: { userName: string; userLastname: string; }) {
+  throw new Error('Method not implemented.');
+}
 
 constructor(private httpClient:HttpClient) { } // aquí se importa la función que enlaza con las APIs
 
