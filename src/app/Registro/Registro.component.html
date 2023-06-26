@@ -66,3 +66,11 @@
     </div>
   </form>
 </div>
+
+<div *ngIf = "errorPasswords">
+  <p>La contraseña no coincide</p>
+</div>
+
+<div *ngIf = "registrado">
+  <p>Usuario registrado con éxito. Gracias por registrate, {{pivoteName}}</p>
+</div>

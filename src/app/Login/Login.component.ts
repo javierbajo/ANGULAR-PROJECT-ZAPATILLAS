@@ -2,6 +2,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { RequestUserService } from '../services/requestUser.service';
 import { UserInterface } from '../models/user.model';
+import { PasarUserService } from '../services/pasarUser.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-Login',
@@ -10,12 +12,12 @@ import { UserInterface } from '../models/user.model';
 })
 export class LoginComponent implements OnInit {
 
-  @Output() existUser = new EventEmitter<any>();
+
 
   userList: UserInterface[]=[];
   logUser: UserInterface|undefined;
 
-  constructor(private requestUserService:RequestUserService) { }
+  constructor(private requestUserService:RequestUserService, private pasarUserService: PasarUserService, private router:Router) { }
 
   ngOnInit() {
     this.getUsers();
@@ -30,59 +32,30 @@ export class LoginComponent implements OnInit {
   }
   
   public email:string ="";
-
   public password:string ="";
+  public usuarioNoExiste: boolean = false;
   
 
   findUser(){
     return this.userList.find(item => item.email === this.email && item.password  === this.password );
   }
 
-  pasarUserAlPadre():void{
-    this.existUser.emit(this.logUser);
-    }
+ 
   login() {
     console.log(this.email);
     console.log(this.password);
     console.log(this.userList);
     this.logUser = this.findUser();
     console.log(this.logUser);
+    if(this.logUser){
+    this.pasarUserService.disparadorUser.emit({data:this.logUser});
+    this.usuarioNoExiste=false;
+    this.router.navigate(['']); // me lleva a home
+    }else this.usuarioNoExiste=true;
     this.email="";
     this.password="";
-    this.pasarUserAlPadre();
+
   }
-
-
-
-
-   
-
-  
-
-
- 
-/*
-  const [user, setUser] = useState(null);
-  const [loginError, setLoginError] = useState("");
-
-  const loginUser = (formData) => {
-    const existUser = userList.find(
-      (user) =>
-        user.email === formData.email && user.password === formData.password
-    );
-
-    if (existUser) {
-      // Segundo estado del user, información del usuario logado
-      setUser(existUser);
-      setLoginError("");
-      navigate("/");
-    } else {
-      // tercer estado del user, usuario no encontrado
-      setUser(false);
-      setLoginError("Usuario o contraseña incorrecta");
-    }
-  };
-*/
 
 
 }

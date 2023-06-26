@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserInterface } from './models/user.model';
+import { PasarUserService } from './services/pasarUser.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,8 @@ import { UserInterface } from './models/user.model';
 export class AppComponent {
   title = 'Javi-Zapatillas';
 
+  constructor(private pasarUserService: PasarUserService) {}
+
   existUser: UserInterface={
     userName:'', 
     email:'', 
@@ -16,6 +19,16 @@ export class AppComponent {
     userLastname:'',
     adress:''
   }
+  ngOnInit(): void{
+
+    this.pasarUserService.disparadorUser.subscribe(data =>{
+      console.log("Recibiendo usuario..." ,data);
+      this.existUser = data.data;
+      console.log(this.existUser);
+    })
+  }
+
+
 
   //setUser(nuevoUser: UserInterface|undefined){
   // this.existUser=this.nuevoUser;

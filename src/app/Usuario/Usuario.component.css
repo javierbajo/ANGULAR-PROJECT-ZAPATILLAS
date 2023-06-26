@@ -1,0 +1,27 @@
+.divUsuario{
+    padding-top: 100px;
+    height: 600px;
+    width: 800px;
+    text-align: center;
+    justify-content: center;
+    /* background-color: blue; */
+    margin:auto;
+}
+
+.datosPersonales{
+    text-align: left;
+    width: 600px;
+    height: 400px;
+    padding-top: 60px;
+    margin:  auto;
+    /* background-color: aqua; */
+}
+
+p{
+font-size: larger;
+}
+
+span{
+    /* font-style: italic; */
+    font-weight: bolder;
+}

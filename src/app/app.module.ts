@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Home/Home.component';
@@ -15,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './Logout/Logout.component';
 import { RegistroComponent } from './Registro/Registro.component';
 import { ErrorPaginaComponent } from './ErrorPagina/ErrorPagina.component';
+import { UsuarioComponent } from './Usuario/Usuario.component';
 
 
 
@@ -22,7 +22,7 @@ import { ErrorPaginaComponent } from './ErrorPagina/ErrorPagina.component';
 
 
 @NgModule({
-  declarations: [										
+  declarations: [												
     AppComponent,
       HomeComponent,
       ContactoComponent,
@@ -32,7 +32,8 @@ import { ErrorPaginaComponent } from './ErrorPagina/ErrorPagina.component';
       FooterComponent,
       LogoutComponent,
       RegistroComponent,
-      ErrorPaginaComponent
+      ErrorPaginaComponent,
+      UsuarioComponent
    ],
   imports: [
     BrowserModule,

@@ -23,7 +23,9 @@
 <div>
 <a href="/registro" class="btn btn-default">Registrarse</a>
 </div>
-    
+<div *ngIf ="usuarioNoExiste" >
+  <p>Error al introducir usuario o contraseña</p>
+</div>
 
   </form>
 </div>

@@ -9,6 +9,10 @@ import { RequestUserService } from '../services/requestUser.service';
 })
 export class RegistroComponent implements OnInit {
 
+  ngOnInit() {
+
+  }
+
   email: string ="";
   password: string ="";
   confirmPassword: string ="";
@@ -16,6 +20,9 @@ export class RegistroComponent implements OnInit {
   userLastname: string ="";
   adress: string ="";
 
+  registrado:boolean = false;
+  errorPasswords:boolean =false;
+  pivoteName: string =""
 
   constructor(private requestUserService:RequestUserService) { }
 
@@ -28,7 +35,13 @@ export class RegistroComponent implements OnInit {
     console.log(this.confirmPassword);
     if(this.password==this.confirmPassword){
       this.registerUser();
-    }else{console.log('los passwords no coinciden')};
+      this.registrado = true;
+      this.pivoteName = this.userName;
+
+    }else{
+      console.log('los passwords no coinciden');
+      this.errorPasswords = true;
+    };
     this.userName="";
     this.userLastname="";
     this.adress="";
@@ -40,15 +53,14 @@ export class RegistroComponent implements OnInit {
 
   public registerUser(){
     this.requestUserService.postData({
-      userName: this.email, 
-      userLastname: this.userName,
+      userName: this.userName, 
+      userLastname: this.userLastname,
       adress: this.adress,
       email: this.email,
       password:this.password
     }).subscribe((data)=> console.log(`Usuario ${data.email} registrado`));
   }
 
-  ngOnInit() {
-  }
+
 
 }

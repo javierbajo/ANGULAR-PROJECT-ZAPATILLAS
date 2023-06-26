@@ -5,11 +5,11 @@
 
 <app-Nav></app-Nav>
 
-<div *ngIf >
-    <p>Usuario {{existUser.userName}}</p>
+<div *ngIf ="existUser.email.length > 0" >
+    <a href="/usuario">Usuario {{existUser.email}}</a>
 </div>
 
-<router-outlet (pasaElUserAlPadre)="existUser"></router-outlet>
+<router-outlet ></router-outlet>
 
 
 
