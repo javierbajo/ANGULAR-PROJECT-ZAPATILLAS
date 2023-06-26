@@ -8,6 +8,7 @@ import { LogoutComponent } from './Logout/Logout.component';
 import { RegistroComponent } from './Registro/Registro.component';
 import { ErrorPaginaComponent } from './ErrorPagina/ErrorPagina.component';
 import { UsuarioComponent } from './Usuario/Usuario.component';
+import { TarjetaZapatillaComponent } from './TarjetaZapatilla/TarjetaZapatilla.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'logout', component: LogoutComponent},
   {path: 'registro', component: RegistroComponent},
   {path: 'usuario', component: UsuarioComponent},
+  {path: 'zapatilladetalle/:id', component: TarjetaZapatillaComponent},
   {path: '**', component: ErrorPaginaComponent}
 ];
 

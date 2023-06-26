@@ -1,10 +1,10 @@
-
 <div class="container">
-
   <ul id="cartaZapatillas">
-    <li *ngFor="let shoe of shoeList" class="card">
+    <li *ngFor="let shoe of shoeList; index as i" class="card">
       <h4>{{ shoe.shoeName }}</h4>
-      <img [src]="shoe.image" [alt]="shoe.shoeName" class="card-image" />
+      <a [routerLink]="['/zapatilladetalle', shoe.shoeName]">
+        <img [src]="shoe.image" [alt]="shoe.shoeName" class="card-image" />
+      </a>
     </li>
   </ul>
 </div>

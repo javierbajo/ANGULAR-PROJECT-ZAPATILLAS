@@ -15,6 +15,7 @@ import { LogoutComponent } from './Logout/Logout.component';
 import { RegistroComponent } from './Registro/Registro.component';
 import { ErrorPaginaComponent } from './ErrorPagina/ErrorPagina.component';
 import { UsuarioComponent } from './Usuario/Usuario.component';
+import { TarjetaZapatillaComponent } from './TarjetaZapatilla/TarjetaZapatilla.component';
 
 
 
@@ -22,7 +23,7 @@ import { UsuarioComponent } from './Usuario/Usuario.component';
 
 
 @NgModule({
-  declarations: [												
+  declarations: [													
     AppComponent,
       HomeComponent,
       ContactoComponent,
@@ -33,7 +34,8 @@ import { UsuarioComponent } from './Usuario/Usuario.component';
       LogoutComponent,
       RegistroComponent,
       ErrorPaginaComponent,
-      UsuarioComponent
+      UsuarioComponent,
+      TarjetaZapatillaComponent
    ],
   imports: [
     BrowserModule,
