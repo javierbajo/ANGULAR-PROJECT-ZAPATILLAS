@@ -20,12 +20,9 @@ export class AppComponent {
     adress:''
   }
   ngOnInit(): void{
-
-    this.pasarUserService.disparadorUser.subscribe(data =>{
-      console.log("Recibiendo usuario..." ,data);
-      this.existUser = data.data;
-      console.log(this.existUser);
-    })
+    this.pasarUserService.selectedUser$.subscribe(user=>{
+      this.existUser=user;
+    });
   }
 
 

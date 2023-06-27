@@ -1,5 +1,6 @@
 export interface ShoeInterface {
-    id: number;
+
+    _id: string;
     shoeName: string;
     type: string;
     price: number;

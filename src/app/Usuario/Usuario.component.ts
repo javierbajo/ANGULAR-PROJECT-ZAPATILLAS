@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PasarUserService } from '../services/pasarUser.service';
 
 @Component({
   selector: 'app-Usuario',
@@ -8,14 +9,21 @@ import { Component, OnInit } from '@angular/core';
 export class UsuarioComponent implements OnInit {
 
   
-  nombre = "Rodolfo"
-  apellido = "Mondoñedo"
-  email = "rodolñedo@ghotmail.com"
-  direccion = "Santo Domingo de Guzmán 18, 4D, 47009, Valladolid"
+  nombre = ""
+  apellido = ""
+  email = ""
+  direccion = ""
   
-  constructor() { }
+  constructor(private pasarUserService: PasarUserService) { }
 
   ngOnInit() {
+    
+    this.pasarUserService.selectedUser$.subscribe(user=>{
+      this.nombre=user.userName;
+    });
+
+      // this.existUser = data.data;
+      // console.log(this.existUser);
   }
 
 }

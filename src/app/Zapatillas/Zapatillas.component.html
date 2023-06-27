@@ -2,7 +2,7 @@
   <ul id="cartaZapatillas">
     <li *ngFor="let shoe of shoeList; index as i" class="card">
       <h4>{{ shoe.shoeName }}</h4>
-      <a [routerLink]="['/zapatilladetalle', shoe.shoeName]">
+      <a [routerLink]="['/zapatilladetalle', shoe._id]">
         <img [src]="shoe.image" [alt]="shoe.shoeName" class="card-image" />
       </a>
     </li>

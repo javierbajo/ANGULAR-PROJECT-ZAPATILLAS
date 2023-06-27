@@ -5,8 +5,8 @@
 
 <app-Nav></app-Nav>
 
-<div *ngIf ="existUser.email.length > 0" >
-    <a href="/usuario">Usuario {{existUser.email}}</a>
+<div *ngIf ="existUser?.userName" >
+    <a [routerLink]="['/usuario']">Usuario {{existUser.email}}</a>
 </div>
 
 <router-outlet ></router-outlet>

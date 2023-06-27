@@ -48,7 +48,9 @@ export class LoginComponent implements OnInit {
     this.logUser = this.findUser();
     console.log(this.logUser);
     if(this.logUser){
-    this.pasarUserService.disparadorUser.emit({data:this.logUser});
+    // this.pasarUserService.disparadorUser.emit({data:this.logUser});
+    this.pasarUserService.setUser(this.logUser);
+
     this.usuarioNoExiste=false;
     this.router.navigate(['']); // me lleva a home
     }else this.usuarioNoExiste=true;
