@@ -33,16 +33,12 @@ button{
 }
 
 .usuarioNoExiste{
-
         display: block;
         padding: 10px;
         justify-content: center;
         text-decoration: none;
         background-color: #666;
         color: #d2eef5;
-        
-        
-    
 }
 
 p{

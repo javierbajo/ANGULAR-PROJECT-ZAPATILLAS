@@ -1,76 +1,79 @@
+<div class="divNotas">
+  <div *ngIf="errorPasswords" class="notaRegistro">
+    <p>La contraseña no coincide</p>
+  </div>
 
+  <div *ngIf="registrado" class="notaRegistro">
+    <p>
+      Usuario registrado con éxito. Gracias por registrate, querido
+      {{ pivoteName }}
+    </p>
+  </div>
+</div>
 <div class="registro">
   <form class="custom-form" method="post">
     <div class="divInput">
-    <input
-      type="text"
-      [(ngModel)]="userName"
-      name="userName"
-      placeholder="Nombre"
-      required="required"
-      class="form-control"
-    />
+      <input
+        type="text"
+        [(ngModel)]="userName"
+        name="userName"
+        placeholder="Nombre"
+        required="required"
+        class="form-control"
+      />
     </div>
     <div class="divInput">
-    <input
-      type="text"
-      [(ngModel)]="userLastname"
-      name="userLastname"
-      placeholder="Apellido"
-      required="required"
-      class="form-control"
-    />
+      <input
+        type="text"
+        [(ngModel)]="userLastname"
+        name="userLastname"
+        placeholder="Apellido"
+        required="required"
+        class="form-control"
+      />
     </div>
     <div class="divInput">
-    <input
-      type="text"
-      [(ngModel)]="adress"
-      name="adress"
-      placeholder="Dirección"
-      required="required"
-      class="form-control"
-    />
+      <input
+        type="text"
+        [(ngModel)]="adress"
+        name="adress"
+        placeholder="Dirección"
+        required="required"
+        class="form-control"
+      />
     </div>
     <div class="divInput">
-    <input
-      type="email"
-      [(ngModel)]="email"
-      name="email"
-      placeholder="Email"
-      required="required"
-      class="form-control"
-    />
+      <input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Email"
+        required="required"
+        class="form-control"
+      />
     </div>
     <div class="divInput">
-    <input
-      type="password"
-      [(ngModel)]="password"
-      name="password"
-      placeholder="Password"
-      required="required"
-      class="form-control"
-    />
+      <input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Password"
+        required="required"
+        class="form-control"
+      />
     </div>
     <div class="divInput">
-    <input
-      type="password"
-      [(ngModel)]="confirmPassword"
-      name="password"
-      placeholder="Repetir password"
-      required="required"
-      class="form-control"
-    />
+      <input
+        type="password"
+        [(ngModel)]="confirmPassword"
+        name="password"
+        placeholder="Repetir password"
+        required="required"
+        class="form-control"
+      />
     </div>
     <div class="divButton">
-    <button type="submit" (click)="register()">Registrarse</button>
+      <button type="submit" (click)="register()">Registrarse</button>
     </div>
   </form>
-</div>
-
-<div *ngIf = "errorPasswords">
-  <p>La contraseña no coincide</p>
-</div>
-
-<div *ngIf = "registrado">
-  <p>Usuario registrado con éxito. Gracias por registrate, {{pivoteName}}</p>
 </div>

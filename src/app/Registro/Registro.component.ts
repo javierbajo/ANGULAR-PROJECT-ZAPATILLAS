@@ -36,6 +36,7 @@ export class RegistroComponent implements OnInit {
     if(this.password==this.confirmPassword){
       this.registerUser();
       this.registrado = true;
+      this.errorPasswords = false;
       this.pivoteName = this.userName;
 
     }else{

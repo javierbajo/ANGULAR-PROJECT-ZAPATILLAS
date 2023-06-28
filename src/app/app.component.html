@@ -5,7 +5,7 @@
 
   <app-Nav></app-Nav>
 
-  <div *ngIf="existUser?.userName">
+  <div *ngIf="existUser?.userName" class="divUsuario">
     <a [routerLink]="['/usuario']">Usuario {{ existUser.email }}</a>
   </div>
 

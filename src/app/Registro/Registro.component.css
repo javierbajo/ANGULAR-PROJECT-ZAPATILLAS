@@ -34,3 +34,20 @@ form{
 button{
     width: 160px;
 }
+.divNotas{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    text-align: center;
+    font-size: 22px;
+    margin-inline: center;
+    margin-top: 30px;
+}
+.notaRegistro{
+    /* display: block; */
+    padding: 10px;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #666;
+    color: #d2eef5;
+}
