@@ -1,16 +1,15 @@
-<div class="divTitle">
-<h1>{{title}}</h1>
+<div class="appContainer">
+  <div class="divTitle">
+    <h1>{{ title }}</h1>
+  </div>
+
+  <app-Nav></app-Nav>
+
+  <div *ngIf="existUser?.userName">
+    <a [routerLink]="['/usuario']">Usuario {{ existUser.email }}</a>
+  </div>
+
+  <router-outlet></router-outlet>
+
+  <app-Footer></app-Footer>
 </div>
-
-
-<app-Nav></app-Nav>
-
-<div *ngIf ="existUser?.userName" >
-    <a [routerLink]="['/usuario']">Usuario {{existUser.email}}</a>
-</div>
-
-<router-outlet ></router-outlet>
-
-
-
-<app-Footer></app-Footer>

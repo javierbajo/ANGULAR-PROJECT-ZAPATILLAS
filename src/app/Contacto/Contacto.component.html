@@ -1,5 +1,50 @@
 <div class="divContacto">
-  <p>  Contacto works!</p>
+  <form>
+    <div class="divInput">
+      <input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Email de contacto"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="divInput">
+      <input
+        type="tel"
+        pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+        [(ngModel)]="phoneNumber"
+        name="phone"
+        placeholder="Teléfono"
+        class="form-control"
+      />
+    </div>
+    <div class="divInput">
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        type="textarea"
+        [(ngModel)]="message"
+        name="email"
+        placeholder="Escriba aquí su mensaje"
+        class="form-control textarea"
+        required
+      ></textarea>
+    </div>
+    <div class="acceptPolicy">    
+      <input type="checkbox" name="accept" value="ok" class="form-check-input" />
+    Acepto la política de datos<br />
+
+      <button type="submit" (click)="sendMessage()"class="divButton">ENVIAR</button>
+    </div>
+  </form>
+  <div class="contact">
+  <h2>Tu tienda de zapatillas en Puxeiros!</h2>
+  <a href="https://www.google.es/maps/place/Avenida+de+Puxeiros,+Pontevedra/@42.2042322,-8.6596057,17z/data=!3m1!4b1!4m6!3m5!1s0xd2587e11c13e11b:0x87abf88f451d79fd!8m2!3d42.2042283!4d-8.6570308!16s%2Fg%2F1pv1gwz66?entry=ttu" target="_blank">Avenida de Puxeiros 25, 36400, Puxeiros, Pontevedra</a>
+  <p>Email de contacto: comercial@javizapatillas.es</p>
+  <p>Teléfono de contacto: +34 666 777 888</p>
 </div>
-
-
+</div>

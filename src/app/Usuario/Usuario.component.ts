@@ -20,6 +20,9 @@ export class UsuarioComponent implements OnInit {
     
     this.pasarUserService.selectedUser$.subscribe(user=>{
       this.nombre=user.userName;
+      this.apellido=user.userLastname;
+      this.email=user.email;
+      this.direccion=user.adress;
     });
 
       // this.existUser = data.data;

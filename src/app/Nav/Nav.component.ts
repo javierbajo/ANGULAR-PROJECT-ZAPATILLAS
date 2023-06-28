@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PasarUserService } from '../services/pasarUser.service';
+import { UserInterface } from '../models/user.model';
 
 @Component({
   selector: 'app-Nav',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private pasarUserService: PasarUserService) { }
 
-  ngOnInit() {
+  public user!: UserInterface;
+  public resetUser: UserInterface ={
+  email: "",
+  userName: "",
+  userLastname: "",
+  adress: "",
+  password: ""
+
   }
 
+  
+  ngOnInit() {
+    this.pasarUserService.selectedUser$.subscribe(user=>{
+      this.user = user;
+    });
+  }
+
+  // logout(){
+  //   this.pasarUserService.selectedUser$.subscribe(user=>{
+  //     this.user = this.resetUser;
+  // })
+  // }
 }
