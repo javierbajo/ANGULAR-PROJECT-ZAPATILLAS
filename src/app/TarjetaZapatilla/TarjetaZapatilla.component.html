@@ -1,3 +1,11 @@
+<div *ngIf="nombre.length == 0, else logeado" class="divNotaLogearse">
+<span class="parpadea text"><strong>NO LOGIN</strong></span>
+<br><br>
+<span class="parpadea text"><strong>NO SHOES</strong></span>
+</div>
+
+
+      <ng-template #logeado>
 
 <div class="contenedor">
 
@@ -10,10 +18,10 @@
   <p>Precio: {{shoeItem.price.toFixed(2)}}€</p>
   <p>Fabricadas en {{shoeItem.origin}}</p>
 </div>
-
- 
-
 </div>
+ </ng-template>
+
+
 
 
 

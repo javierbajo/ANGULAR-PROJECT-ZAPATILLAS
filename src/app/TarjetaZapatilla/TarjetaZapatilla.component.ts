@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RequestService } from '../services/request.service';
 import { ShoeInterface } from '../models/shoe.model';
+import { PasarUserService } from '../services/pasarUser.service';
 
 @Component({
   selector: 'app-TarjetaZapatilla',
@@ -12,9 +13,9 @@ export class TarjetaZapatillaComponent implements OnInit {
 
   // shoeList: ShoeInterface[]=[];
   shoeItem!: ShoeInterface;
-
+  nombre = "";
   
-  constructor(private ruta:ActivatedRoute, private requestService:RequestService) { 
+  constructor(private ruta:ActivatedRoute, private requestService:RequestService, private pasarUserService: PasarUserService) { 
    
   }
 
@@ -22,7 +23,11 @@ export class TarjetaZapatillaComponent implements OnInit {
     this.ruta.params.subscribe(params=>{
       console.log(params['id']);
       this.getShoeDetail(params['id']);
-    })
+    });
+    
+    this.pasarUserService.selectedUser$.subscribe(user=>{
+      this.nombre=user.userName;
+    });
   }
 
   private getShoeDetail(id:string){

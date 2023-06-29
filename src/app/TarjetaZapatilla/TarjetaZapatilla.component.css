@@ -32,3 +32,47 @@ p{
 h4{
     margin-bottom: 50px;
 }
+
+.divNotaLogearse{
+    text-align: center;
+    margin-top: 100px;
+    height: 500px;
+}
+
+.text {
+    font-size:68px;
+    font-family:helvetica;
+    font-weight:bold;
+    color:#db371b;
+    text-transform:uppercase;
+  }
+  .parpadea {
+    
+    animation-name: parpadeo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  
+    -webkit-animation-name:parpadeo;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+  }
+  
+  @-moz-keyframes parpadeo{  
+    0% { opacity: 0.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  } 
+  
+    @-webkit-keyframes parpadeo {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+  }
+  
+  @keyframes parpadeo {  
+    0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  } 

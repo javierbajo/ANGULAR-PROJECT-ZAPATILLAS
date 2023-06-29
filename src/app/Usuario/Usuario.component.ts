@@ -9,10 +9,10 @@ import { PasarUserService } from '../services/pasarUser.service';
 export class UsuarioComponent implements OnInit {
 
   
-  nombre = ""
-  apellido = ""
-  email = ""
-  direccion = ""
+  nombre = "";
+  apellido = "";
+  email = "";
+  direccion = "";
   
   constructor(private pasarUserService: PasarUserService) { }
 
