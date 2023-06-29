@@ -1,10 +1,19 @@
-<div class="container">
 
-    
-      <h4>{{ shoeItem.shoeName }}</h4>
-    
-        <img [src]="shoeItem.image" [alt]="shoeItem.shoeName" class="card-image" />
+<div class="contenedor">
 
+  <img [src]="shoeItem.image" [alt]="shoeItem.shoeName" class="card-image" />
+
+  <div class="contenedorTexto">
+  <h4 class="title text-center">{{ shoeItem.shoeName }}</h4>
   <p>{{shoeItem.description}}</p>
+  <p>Tipo de calzado: {{shoeItem.type}}</p>
+  <p>Precio: {{shoeItem.price.toFixed(2)}}€</p>
+  <p>Fabricadas en {{shoeItem.origin}}</p>
+</div>
+
+ 
 
 </div>
+
+
+

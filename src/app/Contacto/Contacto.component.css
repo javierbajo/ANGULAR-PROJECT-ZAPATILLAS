@@ -1,5 +1,5 @@
 .divContacto{
-    height: 800px;
+    height: 900px;
 }
 
 .formulario{
@@ -52,4 +52,19 @@ h2{
 }
 .contact{
     text-align: center;
+}
+
+.mensajeEnviado{
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #666;
+    color: #d2eef5;
+    margin: auto;
+    font-size: x-large;
+}
+
+p{
+    
 }
